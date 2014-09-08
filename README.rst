@@ -22,6 +22,6 @@ For installation and usage, follow these steps ::
 
     $ pip install -r requirements/local.txt
 
-.. _virtualenv: http://docs.python-guide.org/en/latest/dev/virtualenvs/
+    $ python reponame/manage.py runserver
 
-    $ python reponamebin/manage.py runserver
+.. _virtualenv: http://docs.python-guide.org/en/latest/dev/virtualenvs/
