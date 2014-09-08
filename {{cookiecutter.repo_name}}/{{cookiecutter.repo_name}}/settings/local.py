@@ -8,7 +8,7 @@ TEMPLATE_DEBUG = DEBUG
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': {{project_name}},
+        'NAME': {{cookiecutter.project_name}},
         'HOST': '',
         'USER': 'root',
         'PASSWORD': ''
