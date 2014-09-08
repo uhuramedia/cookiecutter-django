@@ -1,3 +1,5 @@
+from base import *
+
 DEBUG = False
 
 STATIC_ROOT = os.path.join(BASE_DIR, '../../../static')
@@ -8,7 +10,7 @@ TEMPLATE_DEBUG = DEBUG
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': {{cookiecutter.project_name}},
+        'NAME': '{{cookiecutter.project_name}}',
         'HOST': '',
         'USER': '',
         'PASSWORD': ''

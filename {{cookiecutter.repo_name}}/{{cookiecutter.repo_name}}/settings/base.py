@@ -11,6 +11,7 @@ ADMINS = (
 )
 
 INSTALLED_APPS = (
+    'grappelli',
     'django.contrib.auth',
     'django.contrib.admin',
     'django.contrib.contenttypes',

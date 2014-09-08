@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from settings import *
+from base import *
 
 
 DEBUG = True
@@ -8,7 +8,7 @@ TEMPLATE_DEBUG = DEBUG
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': {{cookiecutter.project_name}},
+        'NAME': '{{cookiecutter.project_name}}',
         'HOST': '',
         'USER': 'root',
         'PASSWORD': ''
