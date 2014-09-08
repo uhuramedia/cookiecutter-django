@@ -3,11 +3,9 @@ django==1.7
 
 # Configuration
 django-secure==1.0
-django-cache-url==0.8.0
 dj-database-url==0.3.0
 
 # Forms
-django-braces==1.4.0
 django-crispy-forms==1.4.0
 django-floppyforms==1.2.0
 

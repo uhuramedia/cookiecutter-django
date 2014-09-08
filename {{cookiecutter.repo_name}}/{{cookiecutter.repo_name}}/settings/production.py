@@ -8,7 +8,7 @@ TEMPLATE_DEBUG = DEBUG
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': PROJECT,
+        'NAME': {{project_name}},
         'HOST': '',
         'USER': '',
         'PASSWORD': ''

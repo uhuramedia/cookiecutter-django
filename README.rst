@@ -16,7 +16,7 @@ For installation and usage, follow these steps ::
 
     $ pip install cookiecutter
 
-    $ cookiecutter https://github.com/uhuramedia/cookiecutter-django
+    $ cookiecutter https://github.com/uhuramedia/cookiecutter-django.git
 
     $ cd projectname/
 

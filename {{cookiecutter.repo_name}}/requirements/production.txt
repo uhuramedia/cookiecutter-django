@@ -2,5 +2,5 @@
 #	production that isn't in development.
 -r base.txt
 
-gunicorn==19.1.1
+uWSGI==2.0.7
 Collectfast==0.2.0
