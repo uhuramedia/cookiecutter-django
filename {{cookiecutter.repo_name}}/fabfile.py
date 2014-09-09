@@ -37,8 +37,6 @@ def update(tag=None):
     """
     gitpull()
     collectstatic()
-    compress()
-    syncdb()
     migrate()
     touch()
 
