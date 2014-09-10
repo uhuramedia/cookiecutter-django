@@ -3,8 +3,8 @@ from fabric.api import env, run, local
 
 def live():
     """Connects to the server."""
-    env.hosts = ['{{cookiecutter.domain_name}}']
-    env.user = 'username'
+    env.hosts = ['bankenverband.de']
+    env.user = 'freshmilk'
     env.cwd = '/var/www/{{cookiecutter.project_name}}'
     env.connect_to = '{0}@{1}:{2}'.format(env.user, env.hosts[0], env.cwd)
 
@@ -35,7 +35,7 @@ def touch():
 def update(tag=None):
     """Runs gitpull, develop, collectstatic, migrate and touch.
     """
-    gitpull()
+    gitpull(tag=tag)
     collectstatic()
     migrate()
     touch()
