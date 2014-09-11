@@ -8,6 +8,12 @@ def live():
     env.cwd = '/var/www/{{cookiecutter.project_name}}'
     env.connect_to = '{0}@{1}:{2}'.format(env.user, env.hosts[0], env.cwd)
 
+def beta():
+    """Connects to beta/testing server"""
+    env.hosts = ['beta.{{cookiecutter.domain_name}}']
+    env.user = 'username'
+    env.cwd = '/var/www/beta.{{cookiecutter.project_name}}'
+    env.connect_to = '{0}@{1}:{2}'.format(env.user, env.hosts[0], env.cwd)
 
 def gitpull(tag=None):
     """Pulls upstream brunch on the server."""
