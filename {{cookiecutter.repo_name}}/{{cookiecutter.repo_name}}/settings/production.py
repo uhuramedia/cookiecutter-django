@@ -36,4 +36,4 @@ CACHES = {
 
 PREPEND_WWW = True
 
-ALLOWED_HOSTS = [{{ cookiecutter.domain_name }}]
+ALLOWED_HOSTS = ['{{cookiecutter.domain_name}}'']
