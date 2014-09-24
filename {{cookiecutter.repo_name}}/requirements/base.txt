@@ -6,6 +6,7 @@ MarkupSafe==0.23
 MySQL-python==1.2.5
 Pillow==2.5.3
 dj-database-url==0.3.0
+django-allauth==0.18.0
 django-appconf==0.6
 django-autoslug==1.7.2
 django-avatar==2.0
