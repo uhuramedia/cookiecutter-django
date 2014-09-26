@@ -37,3 +37,5 @@ CACHES = {
 }
 
 SECRET_KEY = '#'
+
+LANGUAGE_CODE = 'en'
