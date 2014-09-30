@@ -1,19 +1,23 @@
-from fabric.api import env, run, local
+import os
+from contextlib import contextmanager
+from fabric.api import env, run, local, prefix, sudo
 
 
 def live():
     """Connects to the server."""
-    env.hosts = ['bankenverband.de']
+    env.hosts = [os.environ.get('{{cookiecutter.repo_name}}_host')]
     env.user = 'freshmilk'
-    env.cwd = '/var/www/{{cookiecutter.project_name}}'
+    env.cwd = '/var/www/{{cookiecutter.domain_name}}'
     env.connect_to = '{0}@{1}:{2}'.format(env.user, env.hosts[0], env.cwd)
+
 
 def beta():
     """Connects to beta/testing server"""
-    env.hosts = ['beta.{{cookiecutter.domain_name}}']
-    env.user = 'username'
-    env.cwd = '/var/www/beta.{{cookiecutter.project_name}}'
+    env.hosts = [os.environ.get('{{cookiecutter.repo_name}}_host')]
+    env.user = 'freshmilk'
+    env.cwd = '/var/www/beta.{{cookiecutter.domain_name}}'
     env.connect_to = '{0}@{1}:{2}'.format(env.user, env.hosts[0], env.cwd)
+
 
 def gitpull(tag=None):
     """Pulls upstream brunch on the server."""
@@ -24,24 +28,38 @@ def gitpull(tag=None):
         run('git pull')
 
 
+@contextmanager
+def source_env():
+    """Actives embedded virtual env"""
+    with prefix('source env/bin/activate'):
+        yield
+
+
 def collectstatic():
     """Collect static files --noinput on server."""
-    run('{{cookiecutter.repo_name}}/manage.py collectstatic --noinput')
+    with source_env():
+        run('python {{cookiecutter.repo_name}}/manage.py collectstatic --noinput')
 
 
 def migrate():
     """Sync project database on server."""
-    run('{{cookiecutter.repo_name}}/manage.py migrate')
+    with source_env():
+        run('python {{cookiecutter.repo_name}}/manage.py migrate')
+
 
 def touch():
     """Touch the wsgi file."""
     run('touch {{cookiecutter.repo_name}}/{{cookiecutter.repo_name}}.wsgi')
 
 
+def reload_uwsgi():
+    sudo('service uwsgi reload')
+
+
 def update(tag=None):
     """Runs gitpull, develop, collectstatic, migrate and touch.
     """
-    gitpull(tag=tag)
+    gitpull()
     collectstatic()
     migrate()
     touch()
