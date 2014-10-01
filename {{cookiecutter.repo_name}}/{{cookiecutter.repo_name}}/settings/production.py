@@ -34,8 +34,6 @@ CACHES = {
     }
 }
 
-PREPEND_WWW = True
-
 ALLOWED_HOSTS = ['{{cookiecutter.domain_name}}']
 
 ROOT_URLCONF = '{{cookiecutter.repo_name}}.urls'
