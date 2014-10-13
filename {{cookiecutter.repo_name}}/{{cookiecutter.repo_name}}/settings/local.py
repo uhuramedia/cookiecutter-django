@@ -36,6 +36,8 @@ CACHES = {
     }
 }
 
+EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
+
 SECRET_KEY = '#'
 
 LANGUAGE_CODE = 'en'

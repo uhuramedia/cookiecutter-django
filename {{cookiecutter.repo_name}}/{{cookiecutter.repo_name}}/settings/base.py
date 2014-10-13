@@ -13,9 +13,10 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-APP_ROOT = os.sep.join(os.path.abspath(os.path.dirname(__file__)).split(os.sep)[:-1])
+PROJECT_DIR = os.sep.join(os.path.abspath(os.path.dirname(__file__)).split(os.sep)[:-2])
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -62,7 +63,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = '{{ cookiecutter.repo_name }}.urls'
 
-WSGI_APPLICATION = 'manybooks.wsgi.application'
+WSGI_APPLICATION = '{{cookiecutter.repo_name}}.wsgi.application'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
@@ -93,7 +94,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
 
-STATIC_ROOT = os.path.join(os.environ.get("WWW_DIR", BASE_DIR), "static")
+STATIC_ROOT = os.path.join(os.environ.get("WWW_DIR", PROJECT_DIR), "static")
 
 STATIC_URL = '/static/'
 
@@ -102,7 +103,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(APP_ROOT, 'static'),
+    os.path.join(BASE_DIR, 'static'),
 )
 
 # List of finder classes that know how to find static files in
