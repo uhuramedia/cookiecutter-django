@@ -1,7 +1,7 @@
 cookiecutter-django
 ===================
 
-Uhura Creative Media GmbH cookiecutter_ template for Django.
+A cookiecutter_ template for Django 1.7 with Fabric, Bootstrap 3 etc.
 
 .. _cookiecutter: https://github.com/audreyr/cookiecutter
 

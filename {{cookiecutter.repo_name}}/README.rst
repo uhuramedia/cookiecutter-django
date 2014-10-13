@@ -1,11 +1,11 @@
 {{cookiecutter.project_name}}
-==============================
+============================
 
 {{cookiecutter.description}}
 
 
-Usage
-------
+Install
+-------
 
 For installation and usage, follow these steps ::
 
@@ -13,10 +13,10 @@ For installation and usage, follow these steps ::
 
     $ cookiecutter https://github.com/uhuramedia/cookiecutter-django
 
-    $ cd projectname/
+    $ cd projectname/ & create/activate virtualenv_
 
     $ pip install -r requirements/local.txt
 
-    $ python reponamebin/manage.py runserver
+    $ python manage.py runserver
 
 .. _virtualenv: http://docs.python-guide.org/en/latest/dev/virtualenvs/
