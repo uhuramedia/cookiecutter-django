@@ -1,17 +1,41 @@
 # -*- coding: utf-8 -*-
 
+
+"""
+Django settings for manybooks project.
+
+For more information on this file, see
+https://docs.djangoproject.com/en/1.7/topics/settings/
+
+For the full list of settings and their values, see
+https://docs.djangoproject.com/en/1.7/ref/settings/
+"""
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-BASE_DIR = os.path.dirname(__file__)
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 APP_ROOT = os.sep.join(os.path.abspath(os.path.dirname(__file__)).split(os.sep)[:-1])
+
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 ADMINS = (
     ('Uhura Developers', 'dev@uhura.de'),
 )
 
+MANAGERS = ADMINS
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'CHANGE!'
+
+ALLOWED_HOSTS = []
+
+
+# Application definition
+
 INSTALLED_APPS = (
-    'grappelli',
+    'djangocms_admin_style',
     'django.contrib.auth',
     'django.contrib.admin',
     'django.contrib.contenttypes',
@@ -25,24 +49,32 @@ INSTALLED_APPS = (
     'allauth.account',
 )
 
-MANAGERS = ADMINS
 
-# Hosts/domain names that are valid for this site; required if DEBUG is False
-# See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = []
+MIDDLEWARE_CLASSES = (
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+)
 
-# Local time zone for this installation. Choices can be found here:
-# http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
-# although not all choices may be available on all operating systems.
-# In a Windows environment this must be set to your system time zone.
+ROOT_URLCONF = '{{ cookiecutter.repo_name }}.urls'
+
+WSGI_APPLICATION = 'manybooks.wsgi.application'
+
+# Internationalization
+# https://docs.djangoproject.com/en/1.7/topics/i18n/
+
 TIME_ZONE = 'Europe/Berlin'
 
 LANGUAGES = [
     ('en', 'English'),
     ('de', 'Deutsch')
 ]
-# Language code for this installation. All choices can be found here:
-# http://www.i18nguy.com/unicode/language-identifiers.html
+
+
 LANGUAGE_CODE = 'en'
 
 SITE_ID = 1
@@ -53,19 +85,16 @@ USE_L10N = True
 
 USE_TZ = True
 
-# Absolute filesystem path to the directory that will hold user-uploaded files.
-# Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, '../../media')
 
-# URL that handles the media served from MEDIA_ROOT. Make sure to use a
-# trailing slash.
-# Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.7/howto/static-files/
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 MEDIA_URL = '/media/'
 
 STATIC_ROOT = os.path.join(os.environ.get("WWW_DIR", BASE_DIR), "static")
 
-# URL prefix for static files.
-# Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/static/'
 
 # Additional locations of static files
@@ -112,14 +141,28 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'allauth.account.context_processors.account',
 )
 
-ROOT_URLCONF = 'urls'
-
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     os.path.join(BASE_DIR, "templates"),
 )
+
+
+AUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django admin, regardless of `allauth`
+    "django.contrib.auth.backends.ModelBackend",
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
+
+ACCOUNT_AUTHENTICATION_METHOD = "username_email"
+
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_UNIQUE_EMAIL = True
+ACCOUNT_USER_MODEL_EMAIL_FIELD = 'email'
+
 
 LOGGING = {
         'version': 1,
@@ -144,18 +187,3 @@ LOGGING = {
             },
         }
     }
-
-
-AUTHENTICATION_BACKENDS = (
-    # Needed to login by username in Django admin, regardless of `allauth`
-    "django.contrib.auth.backends.ModelBackend",
-
-    # `allauth` specific authentication methods, such as login by e-mail
-    "allauth.account.auth_backends.AuthenticationBackend",
-)
-
-ACCOUNT_AUTHENTICATION_METHOD = "username_email"
-
-ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_UNIQUE_EMAIL = True
-ACCOUNT_USER_MODEL_EMAIL_FIELD = 'email'
