@@ -9,13 +9,12 @@ Install
 
 For installation and usage, follow these steps ::
 
-    $ pip install cookiecutter
 
-    $ cookiecutter https://github.com/uhuramedia/cookiecutter-django
-
-    $ cd projectname/ & create/activate virtualenv_
+    $ cd projectname/ & activate virtualenv_
 
     $ pip install -r requirements/local.txt
+
+    $ python manage.py migrate
 
     $ python manage.py runserver
 
