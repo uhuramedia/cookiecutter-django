@@ -1,7 +1,7 @@
 cookiecutter-django
 ===================
 
-Uhura Creative Media GmbH cookiecutter_ template for Django.
+A cookiecutter_ template for Django 1.7 with Fabric, Bootstrap 3 etc.
 
 .. _cookiecutter: https://github.com/audreyr/cookiecutter
 
@@ -18,10 +18,10 @@ For installation and usage, follow these steps ::
 
     $ cookiecutter https://github.com/uhuramedia/cookiecutter-django.git
 
-    $ cd projectname/
+    $ cd projectname/ & create/activate virtualenv_
 
     $ pip install -r requirements/local.txt
 
-    $ python reponame/manage.py runserver
+    $ python manage.py runserver
 
 .. _virtualenv: http://docs.python-guide.org/en/latest/dev/virtualenvs/

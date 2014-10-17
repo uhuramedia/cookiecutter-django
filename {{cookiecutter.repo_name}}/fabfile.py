@@ -36,20 +36,20 @@ def source_env():
 
 
 def collectstatic():
-    """Collect static files --noinput on server."""
+    """Collect static files on server."""
     with source_env():
-        run('python {{cookiecutter.repo_name}}/manage.py collectstatic --noinput')
+        run('python manage.py collectstatic')
 
 
 def migrate():
     """Sync project database on server."""
     with source_env():
-        run('python {{cookiecutter.repo_name}}/manage.py migrate')
+        run('python manage.py migrate')
 
 
 def touch():
     """Touch the wsgi file."""
-    run('touch {{cookiecutter.repo_name}}/{{cookiecutter.repo_name}}.wsgi')
+    run('touch {{cookiecutter.repo_name}}.wsgi')
 
 
 def reload_uwsgi():
@@ -66,11 +66,11 @@ def update(tag=None):
 
 
 def dump():
-    run('{{cookiecutter.repo_name}}/manage.py sqldump')
+    run('python manage.py sqldump')
 
 
 def sync_media():
-    local('rsync -avzh --exclude "CACHE" -e ssh %s/../media/* ../media' % env.connect_to)
+    local('rsync -avzh -e ssh %s/../media/* ../media' % env.connect_to)
 
 
 def sync_dump():
@@ -82,4 +82,4 @@ def mirror():
     dump()
     sync_media()
     sync_dump()
-    local('{{cookiecutter.repo_name}}/manage.py sqlimport')
+    local('python manage.py sqlimport')
