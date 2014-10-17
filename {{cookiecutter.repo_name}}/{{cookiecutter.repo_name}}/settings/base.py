@@ -121,6 +121,8 @@ TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, "templates"),
 )
 
+TEST_RUNNER = 'django.test.runner.DiscoverRunner'
+
 LOGGING = {
         'version': 1,
         'disable_existing_loggers': False,
