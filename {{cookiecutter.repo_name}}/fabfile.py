@@ -1,4 +1,5 @@
 import os
+import datetime
 from contextlib import contextmanager
 from fabric.api import env, run, local, prefix, sudo
 
@@ -66,7 +67,7 @@ def update(tag=None):
 
 
 def dump():
-    run('python manage.py sqldump')
+    run('python manage.py dumpdata > %s' datetime.datetime.now())
 
 
 def sync_media():
