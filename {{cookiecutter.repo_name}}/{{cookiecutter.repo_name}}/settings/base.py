@@ -44,10 +44,6 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    'crispy_forms',
-    'allauth',
-    'allauth.account',
 )
 
 
@@ -139,7 +135,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.tz',
     'django.contrib.messages.context_processors.messages',
     'django.core.context_processors.request',
-    'allauth.account.context_processors.account',
 )
 
 TEMPLATE_DIRS = (
@@ -150,21 +145,6 @@ TEMPLATE_DIRS = (
 )
 
 TEST_RUNNER = 'django.test.runner.DiscoverRunner'
-
-AUTHENTICATION_BACKENDS = (
-    # Needed to login by username in Django admin, regardless of `allauth`
-    "django.contrib.auth.backends.ModelBackend",
-
-    # `allauth` specific authentication methods, such as login by e-mail
-    "allauth.account.auth_backends.AuthenticationBackend",
-)
-
-ACCOUNT_AUTHENTICATION_METHOD = "username_email"
-
-ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_UNIQUE_EMAIL = True
-ACCOUNT_USER_MODEL_EMAIL_FIELD = 'email'
-
 
 LOGGING = {
         'version': 1,

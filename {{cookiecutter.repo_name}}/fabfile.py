@@ -50,11 +50,7 @@ def migrate():
 
 def touch():
     """Touch the wsgi file."""
-    run('touch {{cookiecutter.repo_name}}.wsgi')
-
-
-def reload_uwsgi():
-    sudo('service uwsgi reload')
+    run('touch {{cookiecutter.repo_name}}/wsgi.py')
 
 
 def update(tag=None):

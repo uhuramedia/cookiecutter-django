@@ -32,6 +32,6 @@ CACHES = {
     }
 }
 
-ALLOWED_HOSTS = ['{{cookiecutter.domain_name}}']
+ALLOWED_HOSTS = ['.{{cookiecutter.domain_name}}', '{{cookiecutter.domain_name}}.'] # subdomains and FQDN
 
 ROOT_URLCONF = '{{cookiecutter.repo_name}}.urls'
