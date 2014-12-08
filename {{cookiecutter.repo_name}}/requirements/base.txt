@@ -6,12 +6,10 @@ MarkupSafe
 MySQL-python
 Pillow
 dj-database-url
-django-allauth
 django-appconf
 django-autoslug
 django-avatar
 django-crispy-forms
-django-floppyforms
 django-model-utils
 django-secure
 docutils
