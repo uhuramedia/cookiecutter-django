@@ -26,4 +26,7 @@ For installation and usage, follow these steps ::
 
 .. _virtualenv: http://docs.python-guide.org/en/latest/dev/virtualenvs/
 
-<a href="https://requires.io/github/uhuramedia/cookiecutter-django/requirements/?branch=master"><img src="https://requires.io/github/uhuramedia/cookiecutter-django/requirements.svg?branch=master" alt="Requirements Status" /></a>
+
+.. image:: https://requires.io/github/uhuramedia/cookiecutter-django/requirements.svg?branch=master
+     :target: https://requires.io/github/uhuramedia/cookiecutter-django/requirements/?branch=master
+     :alt: Requirements Status
