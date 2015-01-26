@@ -25,3 +25,8 @@ For installation and usage, follow these steps ::
     $ python manage.py runserver
 
 .. _virtualenv: http://docs.python-guide.org/en/latest/dev/virtualenvs/
+
+
+.. image:: https://requires.io/github/uhuramedia/cookiecutter-django/requirements.svg?branch=master
+     :target: https://requires.io/github/uhuramedia/cookiecutter-django/requirements/?branch=master
+     :alt: Requirements Status
