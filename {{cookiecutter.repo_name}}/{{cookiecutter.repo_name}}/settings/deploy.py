@@ -12,6 +12,7 @@ DATABASES = {
         'HOST': '',
         'USER': '',
         'PASSWORD': ''
+        'CONN_MAX_AGE': 600,
     }
 }
 

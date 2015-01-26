@@ -3,7 +3,7 @@
 Django
 Jinja2
 MarkupSafe
-MySQL-python
+psycopg2
 Pillow
 dj-database-url
 django-appconf

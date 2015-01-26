@@ -7,11 +7,12 @@ TEMPLATE_DEBUG = DEBUG
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': '{{cookiecutter.project_name}}',
         'HOST': '',
         'USER': 'root',
         'PASSWORD': ''
+        'CONN_MAX_AGE': 600,
     }
 }
 
@@ -36,8 +37,6 @@ CACHES = {
     }
 }
 
-EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 SECRET_KEY = '#'
-
-LANGUAGE_CODE = 'en'
