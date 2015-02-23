@@ -8,6 +8,8 @@ A cookiecutter_ template for Django 1.7 with Fabric, Bootstrap 3 etc.
 * For Django 1.7
 * Twitter Bootstrap 3
 
+A reasoning behind why this is good layout, please read this article from RevSys http://bit.ly/1u299Uf
+
 
 Usage
 ------
