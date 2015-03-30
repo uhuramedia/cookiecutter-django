@@ -20,13 +20,11 @@ For installation and usage, follow these steps ::
 
     $ cookiecutter https://github.com/uhuramedia/cookiecutter-django.git
 
-    $ cd projectname/ & create/activate virtualenv_
+    $ cd projectname/ && virtualenv env && source env/bin/activate
 
     $ pip install -r requirements/local.txt
 
     $ python manage.py runserver
-
-.. _virtualenv: http://docs.python-guide.org/en/latest/dev/virtualenvs/
 
 
 .. image:: https://requires.io/github/uhuramedia/cookiecutter-django/requirements.svg?branch=master
