@@ -4,3 +4,4 @@
 local_settings.py
 repo_name
 *.DS_Store
+.idea/

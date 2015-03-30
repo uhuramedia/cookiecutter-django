@@ -165,3 +165,13 @@ LOGGING = {
             },
         }
     }
+
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+
+CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': None,
+    },
+}
