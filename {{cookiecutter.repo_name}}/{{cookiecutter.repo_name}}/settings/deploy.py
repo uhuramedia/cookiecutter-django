@@ -11,7 +11,7 @@ DATABASES = {
         'NAME': '{{cookiecutter.project_name}}',
         'HOST': '',
         'USER': '',
-        'PASSWORD': ''
+        'PASSWORD': '',
         'CONN_MAX_AGE': 600,
     }
 }

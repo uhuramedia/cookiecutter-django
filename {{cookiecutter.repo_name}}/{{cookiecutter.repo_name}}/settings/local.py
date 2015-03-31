@@ -9,7 +9,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': '{{cookiecutter.project_name}}',
-        'HOST': '',
+        'HOST': 'localhost',
         'USER': 'root',
         'PASSWORD': '',
         'CONN_MAX_AGE': 600,
