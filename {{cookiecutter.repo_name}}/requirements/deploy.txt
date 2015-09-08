@@ -4,3 +4,4 @@
 
 uWSGI
 Collectfast
+python-memcached==1.57
