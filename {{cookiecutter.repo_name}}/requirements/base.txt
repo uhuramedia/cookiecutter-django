@@ -18,3 +18,4 @@ ipython
 unicode-slugify
 djangocms-admin-style
 django-ckeditor
+django-extensions
