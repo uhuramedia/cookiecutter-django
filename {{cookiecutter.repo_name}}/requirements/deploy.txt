@@ -2,6 +2,5 @@
 #	production that isn't in development.
 -r base.txt
 
-uWSGI
 Collectfast
 python-memcached==1.57
