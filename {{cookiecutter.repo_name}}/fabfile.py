@@ -23,7 +23,7 @@ def beta():
 
 
 def gitpull(tag=None):
-    """Pulls upstream brunch on the server."""
+    """Pulls upstream branch on the server."""
     if tag is not None:
         run('git pull')
         run('git checkout %s' % tag)
