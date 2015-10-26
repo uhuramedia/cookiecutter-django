@@ -30,3 +30,10 @@ For installation and usage, follow these steps ::
 .. image:: https://requires.io/github/uhuramedia/cookiecutter-django/requirements.svg?branch=master
      :target: https://requires.io/github/uhuramedia/cookiecutter-django/requirements/?branch=master
      :alt: Requirements Status
+
+
+Notes
+-----
+
+As rule of thumb, use MySQL/MariaDB for smaller projects. Since using and setting up MariaDB is easy, this cookiecutter is configured to use it by default.
+Use PostgreSQL for medium/big size projects as there is high changes we might need Postgres specific features like JSON, HStore etc. and obvious realibility.
