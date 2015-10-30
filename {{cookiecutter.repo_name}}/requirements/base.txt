@@ -4,17 +4,11 @@ Django
 Jinja2
 MySQL-Python
 Pillow
-dj-database-url
 django-appconf
 django-autoslug
 django-avatar
-django-crispy-forms
-django-model-utils
-django-secure
-docutils
 ipdb
 ipython
 unicode-slugify
 djangocms-admin-style
-django-ckeditor
 django-extensions
