@@ -6,11 +6,7 @@ from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings
 
-urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'pro.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-
+urlpatterns = patterns(
+    '',
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^ckeditor/', include('ckeditor.urls')),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
