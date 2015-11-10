@@ -1,12 +1,11 @@
 cookiecutter-django
 ===================
 
-A cookiecutter_ template for Django 1.7 with Fabric, Bootstrap 3 etc.
+A [cookiecutter](https://github.com/audreyr/cookiecutter) template for Django 1.8 with Fabric, Bootstrap 3 etc.
 
-.. _cookiecutter: https://github.com/audreyr/cookiecutter
-
-* For Django 1.7
+* Django 1.8
 * Twitter Bootstrap 3
+* MariaDB/PostgreSQL
 
 A reasoning behind why this is good layout, please read this article from RevSys http://bit.ly/1u299Uf
 
@@ -27,9 +26,7 @@ For installation and usage, follow these steps ::
     $ python manage.py runserver
 
 
-.. image:: https://requires.io/github/uhuramedia/cookiecutter-django/requirements.svg?branch=master
-     :target: https://requires.io/github/uhuramedia/cookiecutter-django/requirements/?branch=master
-     :alt: Requirements Status
+[![Requirements Status](https://requires.io/github/uhuramedia/cookiecutter-django/requirements.svg?branch=master)](https://requires.io/github/uhuramedia/cookiecutter-django/requirements/?branch=master)
 
 
 Notes

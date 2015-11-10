@@ -7,7 +7,7 @@
 Install
 -------
 
-For installation and usage, follow these steps ::
+For installation and usage, follow these steps
 
 
     $ cd projectname
@@ -23,10 +23,10 @@ For installation and usage, follow these steps ::
 Deploy
 ------
 
-Basic fabric commands are included for deployment ::
+Basic fabric commands are included for deployment
 
     $ fab live update
 
-Sync with live version of media files and database ::
+Sync with live version of media files and database
 
     $ fab live mirror
