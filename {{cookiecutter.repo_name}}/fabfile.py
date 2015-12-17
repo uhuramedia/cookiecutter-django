@@ -56,7 +56,8 @@ def touch():
 
 
 def update(tag=None):
-    """Runs gitpull, develop, collectstatic, migrate and touch.
+    """
+    Runs gitpull, develop, collectstatic, migrate and touch.
     """
     gitpull()
     collectstatic()
@@ -65,7 +66,8 @@ def update(tag=None):
 
 
 def dump():
-    run('python manage.py dumpdata > %s' datetime.datetime.now())
+    with source_env():
+        run('python manage.py sqldump'
 
 
 def sync_media():
