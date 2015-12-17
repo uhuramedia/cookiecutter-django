@@ -81,6 +81,6 @@ def sync_dump():
 def mirror():
     """Runs dump, sync_media, sync_dump and sqlimport."""
     dump()
-    sync_media()
     sync_dump()
     local('python manage.py sqlimport')
+    sync_media()
