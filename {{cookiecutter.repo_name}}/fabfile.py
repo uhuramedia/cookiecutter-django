@@ -71,7 +71,7 @@ def dump():
 
 
 def sync_media():
-    local('rsync -avzh -e ssh %s/../media/* ../media' % env.connect_to)
+    local('rsync -avzh -e ssh %s/media/* media/' % env.connect_to)
 
 
 def sync_dump():
