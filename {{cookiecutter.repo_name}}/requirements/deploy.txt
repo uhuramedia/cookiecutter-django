@@ -3,4 +3,3 @@
 -r base.txt
 
 Collectfast
-python-memcached==1.57

@@ -1,14 +1,10 @@
 # All common dependencies go here
 
 Django
-Jinja2
 MySQL-Python
 Pillow
-django-appconf
-django-autoslug
-django-avatar
-ipdb
 ipython
 unicode-slugify
 djangocms-admin-style
 django-extensions
+python-memcached==1.57
