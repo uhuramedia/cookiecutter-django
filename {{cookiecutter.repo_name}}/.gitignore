@@ -31,5 +31,7 @@ node_modules/
 # Campass
 .sass-cache
 
-# virtualenv
+# pip/virtualenv
 env/
+.Python
+pip-selfcheck.json
