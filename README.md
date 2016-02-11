@@ -1,9 +1,9 @@
 cookiecutter-django
 ===================
 
-A [cookiecutter](https://github.com/audreyr/cookiecutter) template for Django 1.8 with Fabric, Bootstrap 3 etc.
+A [cookiecutter](https://github.com/audreyr/cookiecutter) template for Django with Fabric, Bootstrap 3 etc.
 
-* Django 1.8
+* Django >= 1.9
 * Twitter Bootstrap 3
 * MariaDB/PostgreSQL
 
