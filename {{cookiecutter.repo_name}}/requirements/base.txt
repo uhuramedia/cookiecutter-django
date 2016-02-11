@@ -5,6 +5,5 @@ MySQL-Python
 Pillow
 ipython
 unicode-slugify
-djangocms-admin-style
 django-extensions
-python-memcached==1.57
+python-memcached

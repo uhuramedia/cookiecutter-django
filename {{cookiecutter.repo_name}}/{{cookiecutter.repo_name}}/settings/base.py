@@ -30,11 +30,12 @@ SECRET_KEY = 'CHANGE!'
 
 ALLOWED_HOSTS = []
 
+EMAIL_SUBJECT_PREFIX = '{{ cookiecutter.domain_name }}'
+
 
 # Application definition
 
 INSTALLED_APPS = (
-    'djangocms_admin_style',
     'django.contrib.auth',
     'django.contrib.admin',
     'django.contrib.contenttypes',
