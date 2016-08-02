@@ -168,7 +168,7 @@ LOGGING = {
                 'propagate': True,
             },
         }
-
+}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
