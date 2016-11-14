@@ -67,7 +67,7 @@ def update(tag=None):
 
 def dump():
     with source_env():
-        run('python manage.py sqldump'
+        run('python manage.py sqldump')
 
 
 def sync_media():
