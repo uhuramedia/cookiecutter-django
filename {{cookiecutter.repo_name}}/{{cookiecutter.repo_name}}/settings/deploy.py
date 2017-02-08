@@ -2,9 +2,6 @@ from base import *
 
 DEBUG = False
 
-TEMPLATE_DEBUG = DEBUG
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -16,14 +13,7 @@ DATABASES = {
     }
 }
 
-TEMPLATE_LOADERS = (
-    (
-        'django.template.loaders.cached.Loader', (
-            'django.template.loaders.filesystem.Loader',
-            'django.template.loaders.app_directories.Loader',
-        )
-    ),
-)
+TEMPLATES[0]['OPTIONS']['debug'] = DEBUG
 
 CACHES = {
     'default': {
