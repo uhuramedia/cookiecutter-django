@@ -19,7 +19,7 @@ CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
         'LOCATION': '127.0.0.1:11211',
-        'KEY_PREFIX': 'key_prefix'
+        'KEY_PREFIX': '{{cookiecutter.repo_name}}_key_prefix'
     }
 }
 
